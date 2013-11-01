@@ -4,11 +4,18 @@ body {
   line-height: 1.6;
 }
 .document-lines {
-
+  margin-bottom: 60px;
 }
 .document-line {
 
 }
+.document-line .line-left, .document-line .line-right {
+  border: 1px solid #fff;
+}
 .document-line .line-left {
   border-right: 1px solid #ccc;
+}
+.document-line .line-left:hover {
+  background-color: rgba(226, 245, 203, 0.4);
+  border: 1px solid #ccc;
 }
