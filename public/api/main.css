@@ -1,0 +1,14 @@
+body {
+  padding: 0 30px;
+  margin-top: 60px;
+  line-height: 1.6;
+}
+.document-lines {
+
+}
+.document-line {
+
+}
+.document-line .line-left {
+  border-right: 1px solid #ccc;
+}

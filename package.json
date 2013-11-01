@@ -8,12 +8,11 @@
   "dependencies": {
     "marked": "~0.1.9",
     "express": "3.1.0",
-    "ejs": "*",
     "debug": "*",
     "async": "*",
-    "mysql": "2.x",
     "xss": "*",
     "lei-mysql": "0.1.1",
-    "rd": "0.0.1"
+    "rd": "0.0.1",
+    "express-liquid": "0.2.3"
   }
 }

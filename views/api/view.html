@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="{{lang}}">
+<head>
+<meta charset="utf-8">
+<title>{{file}} - Node.js {{config.api.version}} 中文文档</title>
+<link rel="stylesheet" href="/public/highlightjs/default.min.css">
+<link rel="stylesheet" href="/public/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="/public/bootstrap/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="/public/api/main.css">
+</head>
+<body>
+
+  <div id="header">
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="navbar-header">
+        <span class="navbar-brand" href="#">Node.js API 中文版</span>
+      </div>
+      <div class="collapse navbar-collapse navbar-ex5-collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="index.html">文档首页</a></li>
+          <li><a href="#">进度</a></li>
+          <li><a href="#">感谢</a></li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">关于<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="https://github.com/leizongmin/node-doc-cn" target="_blank">项目源码</a></li>
+              <li><a href="https://github.com/leizongmin/node-doc-cn/issues" target="_blank">报告问题</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+  <div class="document-lines">
+    {% for item in items %}
+    <div class="row document-line" data-hash="{{item.hash}}">
+      <div class="col-md-6 line-left">
+      {% if item.translate %}
+        {{item.translate.content | md-to-html}}
+      {% else %}
+        {{item.content | md-to-html}}
+      {% endif %}
+      </div>
+      <!-- 原文 -->
+      <div class="col-md-6 line-right">{{item.content | md-to-html}}</div>
+    </div>
+    {% endfor %}
+  </div>
+</body>
+</html>
+<script src="/public/js/jquery.js"></script>
+<script src="/public/bootstrap/js/bootstrap.min.js"></script>
+<script src="/public/highlightjs/highlight.min.js"></script>
+<script src="/public/api/main.js"></script>
