@@ -2,20 +2,47 @@ body {
   padding: 0 30px;
   margin-top: 60px;
   line-height: 1.6;
+  background-color: #eee;
 }
 .document-lines {
-  margin-bottom: 60px;
+  max-width: 980px;
+  margin: auto;
 }
 .document-line {
 
 }
-.document-line .line-left, .document-line .line-right {
-  border: 1px solid #fff;
-}
 .document-line .line-left {
-  border-right: 1px solid #ccc;
+  border: 1px dashed #fff;
+  border-right: 1px dashed #ccc;
+  background-color: #fff;
 }
-.document-line .line-left:hover {
+.document-line:hover .line-left {
   background-color: rgba(226, 245, 203, 0.4);
   border: 1px solid #ccc;
+}
+.document-line .line-left .translate {
+
+}
+.document-line .line-right {
+
+}
+.document-line .line-right .origin {
+  display: none;
+}
+.document-line .line-op {
+  display: none;
+}
+.document-line:hover .line-op {
+  display: initial;
+}
+.document-line .line-op .notes {
+  padding: 1px 5px;
+}
+.document-line:hover .line-op i {
+  cursor: pointer;
+  padding: 4px;
+  border: 1px solid #eee;
+}
+.document-line:hover .line-op i:hover {
+  border: 1px dotted #aaa;
 }

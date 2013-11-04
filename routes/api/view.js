@@ -78,7 +78,11 @@ module.exports = function (app, middleware, config, utils) {
       var items = stripMetaItems(items);
 
       res.context.setLocals('items', stripMetaItems(items));
-      res.render('api/view');
+      if (req.query.clean) {
+        res.render('api/view_clean');
+      } else {
+        res.render('api/view');
+      }
     });
   });
 

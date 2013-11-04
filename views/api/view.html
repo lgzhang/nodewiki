@@ -35,15 +35,24 @@
   <div class="document-lines">
     {% for item in items %}
     <div class="row document-line" data-hash="{{item.hash}}">
-      <div class="col-md-6 line-left">
-      {% if item.translate %}
-        {{item.translate.content | md-to-html}}
-      {% else %}
-        {{item.content | md-to-html}}
-      {% endif %}
+      <div class="col-md-9 line-left">
+        <div class="translate">
+        {% if item.translate %}
+          {{item.translate.content | md-to-html}}
+        {% else %}
+          {{item.content | md-to-html}}
+        {% endif %}
+        </div>
       </div>
-      <!-- 原文 -->
-      <div class="col-md-6 line-right">{{item.content | md-to-html}}</div>
+      <div class="col-md-3 line-right">
+        <div class="line-op">
+          {% unless item.translate %}<span class="alert alert-info notes">此段暂时还没有翻译</span> <button class="btn btn-xs btn-info"><i class="glyphicon glyphicon-edit"></i>我要翻译</button>{% endunless %}
+          <i class="glyphicon glyphicon-thumbs-up" title="赞"></i>
+          <i class="glyphicon glyphicon-edit" title="纠错"></i>
+          <i class="glyphicon glyphicon-list-alt" title="详细信息"></i>
+        </div>
+        <div class="origin">{{item.content | md-to-html}}</div>
+      </div>
     </div>
     {% endfor %}
   </div>
