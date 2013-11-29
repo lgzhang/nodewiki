@@ -1,9 +1,97 @@
 body {
   padding: 0 30px;
   margin-top: 60px;
-  line-height: 1.6;
+  line-height: 2;
   background-color: #eee;
 }
+
+/* 排版样式 */
+h1, h2, h3, h4, h5, h6 {
+  font-family: Helvetica, Arial, sans-serif;
+  color: #000;
+  text-rendering: optimizeLegibility;
+  position: relative;
+}
+h1 {
+  font-size: 29px;
+  line-height: 33px;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+h2 {
+  font-size: 1.4em;
+  line-height: 1.0909em;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+h2 + h2 {
+  margin: 0 0 0.5em;
+}
+h3 {
+  font-size: 1.3em;
+  line-height: 1.1282em;
+  margin: 2.2em 0 0.5em;
+}
+h3 + h3 {
+  margin: 0 0 0.5em;
+}
+h2, h3, h4 {
+  position: relative;
+  padding-right: 40px;
+}
+h1 span, h2 span, h3 span, h4 span {
+  font-size: 25px;
+  position: absolute;
+  display: block;
+  top: 0;
+  right: 0;
+  opacity: 0.3;
+}
+h1 span:hover, h2 span:hover, h3 span:hover, h4 span:hover {
+  opacity: 1;
+}
+h1 span a, h2 span a, h3 span a, h4 span a {
+  font-size: 0.8em;
+  color: #000;
+  text-decoration: none;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: bold;
+}
+h5 {
+  font-size: 1.125em;
+  line-height: 1.4em;
+}
+h6 {
+  font-size: 1em;
+  line-height: 1.4667em;
+}
+pre, tt, code {
+  font-size: 14px;
+  line-height: 1.5438em;
+  font-family: Monaco, Consolas, "Lucida Console", monospace;
+  margin: 0; padding: 0;
+}
+.pre {
+  font-family: Monaco, Consolas, "Lucida Console", monospace;
+  line-height: 1.5438em;
+  font-size: 0.95em;
+}
+pre {
+  padding: 1em 1.6em 1em 1.2em;
+  vertical-align: top;
+  background: #f8f8f8;
+  border: 1px solid #e8e8e8;
+  border-width: 1px 1px 1px 6px;
+  overflow-x: auto;
+}
+pre + h3 {
+  margin-top: 2.225em;
+}
+code.pre {
+  white-space: pre;
+}
+
+/* 界面布局 */
 .document-lines {
   max-width: 980px;
   margin: auto;
@@ -45,4 +133,11 @@ body {
 }
 .document-line:hover .line-op i:hover {
   border: 1px dotted #aaa;
+}
+.document-line:hover .line-op .btn i, .document-line:hover .line-op .btn i:hover {
+  border: none;
+}
+.document-line.untranslated .translate {
+  min-height: 45px;
+  color: rgb(121, 0, 0);
 }
