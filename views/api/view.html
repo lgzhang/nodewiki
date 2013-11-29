@@ -38,9 +38,9 @@
       <div class="col-md-9 line-left">
         <div class="translate">
         {% if item.translate %}
-          {{item.translate.content | md-to-html}}
+          {{item.translate.content | md_to_html}}
         {% else %}
-          {{item.content | md-to-html}}
+          {{item.content | md_to_html}}
         {% endif %}
         </div>
       </div>
@@ -51,7 +51,7 @@
           <i class="glyphicon glyphicon-edit" title="纠错"></i>
           <i class="glyphicon glyphicon-list-alt" title="详细信息"></i>
         </div>
-        <div class="origin">{{item.content | md-to-html}}</div>
+        <div class="origin">{{item.content | md_to_html}}</div>
       </div>
     </div>
     {% endfor %}
