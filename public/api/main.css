@@ -95,6 +95,7 @@ code.pre {
 .document-lines {
   max-width: 980px;
   margin: auto;
+  margin-bottom: 100px;
 }
 .document-line {
 
@@ -105,7 +106,7 @@ code.pre {
   background-color: #fff;
 }
 .document-line:hover .line-left {
-  background-color: rgba(226, 245, 203, 0.4);
+  /*background-color: rgba(226, 245, 203, 0.4);*/
   border: 1px solid #ccc;
 }
 .document-line .line-left .translate {
